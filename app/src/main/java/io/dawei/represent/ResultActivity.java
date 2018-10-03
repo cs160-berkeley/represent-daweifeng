@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import java.io.Serializable;
 import java.util.List;
@@ -28,6 +29,8 @@ public class ResultActivity extends AppCompatActivity {
             latitude = intent.getStringExtra(LocationActivity.EXTRA_LATITUDE);
             longitude = intent.getStringExtra(LocationActivity.EXTRA_LONGITUDE);
         }
+
+
 
     }
 

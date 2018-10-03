@@ -27,6 +27,7 @@ public class CDInfo {
     private String latitude = "";
     public String address = "";
     private android.content.Context context;
+    public ArrayList<Representative> representatives;
 
     CDInfo(android.content.Context context) {
         this.context = context;
@@ -40,8 +41,12 @@ public class CDInfo {
 
     private void sendRequest(String location, Boolean reverseGeo, final CDInfo thisObject) {
         Log.d("location", location);
+        String url;
         if (!reverseGeo) {
-            String url = BASE_URL + "geocode?q=" + location +"&fields=cd&api_key=" + API_KEY;
+            url = BASE_URL + "geocode?q=" + location + "&fields=cd&api_key=" + API_KEY;
+        } else {
+            url = BASE_URL + "reverse?q=" + location + "&fields=cd&api_key=" + API_KEY;
+        }
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
                     (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
 
@@ -68,16 +73,19 @@ public class CDInfo {
                                         String party = legislator.getJSONObject("bio").getString("party");
                                         String phoneNumber = legislator.getJSONObject("contact").getString("phone");
                                         String url = legislator.getJSONObject("contact").getString("url");
+                                        String contact_form = legislator.getJSONObject("contact").getString("contact_form");
+                                        String bio_guide_id = legislator.getJSONObject("references").getString("bioguide_id");
+
                                         if (nameRep.contains(name)) {
                                             continue;
                                         }
-                                        Representative representative = new Representative(name, party, phoneNumber, url);
+                                        Representative representative = new Representative(name, party, phoneNumber, url, contact_form, bio_guide_id);
                                         representatives.add(representative);
                                         nameRep.add(name);
                                     }
                                 }
+                                thisObject.representatives = representatives;
 
-                                
 
 
 
@@ -96,10 +104,12 @@ public class CDInfo {
                     });
             RequestQueue queue = Volley.newRequestQueue(this.context);
             queue.add(jsonObjectRequest);
-        }
     }
 
     public String getAddress() {
         return this.address;
     }
+
+
+
 }
