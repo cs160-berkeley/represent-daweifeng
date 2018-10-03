@@ -31,7 +31,7 @@
         app:layout_constraintVertical_bias="0.029">
 
         <RadioButton
-            android:id="@+id/radioButton5"
+            android:id="@+id/radioButtonCurrentLocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:buttonTint="@color/searchBlue"
@@ -39,7 +39,7 @@
             android:textColorLink="@color/searchBlue" />
 
         <RadioButton
-            android:id="@+id/radioButton6"
+            android:id="@+id/radioButtonRandomLocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:buttonTint="@color/searchBlue"
@@ -89,10 +89,21 @@
         android:layout_marginTop="24dp"
         android:background="@drawable/search_bg"
         android:elevation="2dp"
+        android:onClick="sendLocation"
         android:text="Search"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText3" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="59dp" />
 
 </android.support.constraint.ConstraintLayout>
