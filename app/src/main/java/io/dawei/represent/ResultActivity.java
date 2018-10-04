@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.io.Serializable;
 import java.util.List;
@@ -16,6 +17,7 @@ public class ResultActivity extends AppCompatActivity {
     private String longitude = "";
     private String latitude = "";
     ListView listView;
+    TextView textViewLocation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,36 +28,23 @@ public class ResultActivity extends AppCompatActivity {
         if (intent.hasExtra(LocationActivity.EXTRA_ZIPCODE)) {
             zipCode = intent.getStringExtra(LocationActivity.EXTRA_ZIPCODE);
             listView = (ListView) findViewById(R.id.listView);
-            CDInfo cdInfo = new CDInfo(this, listView);
+            textViewLocation = findViewById(R.id.textViewLocation);
+            CDInfo cdInfo = new CDInfo(this, listView, textViewLocation);
+
             cdInfo.getWithZipCode(zipCode);
 
         } else {
             latitude = intent.getStringExtra(LocationActivity.EXTRA_LATITUDE);
             longitude = intent.getStringExtra(LocationActivity.EXTRA_LONGITUDE);
+            listView = (ListView) findViewById(R.id.listView);
+            textViewLocation = findViewById(R.id.textViewLocation);
+            CDInfo cdInfo = new CDInfo(this, listView, textViewLocation);
+
+            cdInfo.getWithGeo(latitude,longitude);
         }
 
 
 
     }
 
-
-
-
-
-
-
-
-
-
-    private class AsyncListViewLoader extends AsyncTask<String, Void, List<Representative>> {
-
-        @Override
-        protected List<Representative> doInBackground(String... strings) {
-            return null;
-        }
-    }
-
-    public class Representative implements Serializable {
-
-    }
 }

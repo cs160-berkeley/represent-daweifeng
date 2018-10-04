@@ -2,6 +2,7 @@ package io.dawei.represent;
 
 import android.util.Log;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -31,17 +32,25 @@ public class CDInfo {
     public android.content.Context context;
     public List<Representative> representatives;
     private ListView listView;
+    private TextView textViewLocation;
 
-    CDInfo(android.content.Context context, ListView listView) {
+    CDInfo(android.content.Context context, ListView listView, TextView textViewLocation) {
         this.context = context;
         this.listView = listView;
-
+        this.textViewLocation = textViewLocation;
     }
 
 
     public void getWithZipCode(String zipCode) {
         this.zipCode = zipCode;
         sendRequest(zipCode, false, this);
+    }
+
+    public void getWithGeo(String latitude, String longitude) {
+        this.latitude = latitude;
+        this.longitude = longitude;
+        String geoCode = latitude+","+longitude;
+        sendRequest(geoCode, true, this);
     }
 
     private void sendRequest(String location, Boolean reverseGeo, final CDInfo thisObject) {
@@ -63,6 +72,7 @@ public class CDInfo {
                                 JSONObject result = response.getJSONArray("results").getJSONObject(0);
 
                                 thisObject.address = result.getString("formatted_address");
+                                textViewLocation.setText(thisObject.address);
 
                                 JSONArray cds = result.getJSONObject("fields").getJSONArray("congressional_districts");
 //                              Keep track of the iterated reps
@@ -81,14 +91,16 @@ public class CDInfo {
                                         String contact_form = legislator.getJSONObject("contact").getString("contact_form");
                                         String bio_guide_id = legislator.getJSONObject("references").getString("bioguide_id");
 
+
                                         if (nameRep.contains(name)) {
                                             continue;
                                         }
-                                        Representative representative = new Representative(name, party, phoneNumber, url, contact_form, bio_guide_id);
+                                        Representative representative = new Representative(name, party, phoneNumber, url, contact_form, bio_guide_id, thisObject.getAddress());
                                         representatives.add(representative);
                                         nameRep.add(name);
                                     }
                                 }
+
                                 thisObject.representatives = representatives;
                                 RepresentativeListAdapter adapter = new
                                         RepresentativeListAdapter(thisObject.context,R.layout.representative_list_item,representatives);

@@ -7,14 +7,16 @@ public class Representative {
     private String url;
     private String contact_form;
     private String bioguide_id;
+    private String address;
 
-    Representative(String name, String party, String phoneNumber, String url, String contact_form, String bioguide_id) {
+    Representative(String name, String party, String phoneNumber, String url, String contact_form, String bioguide_id, String address) {
         this.name = name;
         this.party = party;
         this.phoneNumber = phoneNumber;
         this.url = url;
         this.contact_form = contact_form;
         this.bioguide_id = bioguide_id;
+        this.address = address;
     }
 
     public String getName() {
@@ -39,5 +41,9 @@ public class Representative {
 
     public String getContact_form() {
         return contact_form;
+    }
+
+    public String getAddress() {
+        return address;
     }
 }

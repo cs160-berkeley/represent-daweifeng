@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import org.w3c.dom.Text;
 
 import java.util.List;
@@ -53,6 +55,9 @@ public class RepresentativeListAdapter extends ArrayAdapter<Representative> {
         textViewContact.setText(representative.getContact_form());
         textViewWeb.setText(representative.getUrl());
 
+//        Fetch image
+        String imageUrl = "https://theunitedstates.io/images/congress/225x275/" + representative.getBioguide_id() + ".jpg";
+        Picasso.get().load(imageUrl).resize(180, 180).centerCrop().transform(new CircleTransform(600,0)).into(imageView);
         return view;
 
     }

@@ -66,9 +66,10 @@ public class LocationActivity extends AppCompatActivity {
                     zipCode = "";
 
                     RadioButton checkedButton = findViewById(checkedId);
-
+                    Log.d("check", String.valueOf(checkedId));
 //              Get Location
                     if (checkedId == R.id.radioButtonCurrentLocation) {
+                        Log.d("test","aaaaaaa");
                         if (ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                             // TODO: Consider calling
                             //    ActivityCompat#requestPermissions
@@ -89,6 +90,7 @@ public class LocationActivity extends AppCompatActivity {
                                     @Override
                                     public void onSuccess(Location location) {
                                         // Got last known location. In some rare situations this can be null.
+
                                         if (location != null) {
                                             // Logic to handle location object
 
