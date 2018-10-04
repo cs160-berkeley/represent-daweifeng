@@ -1,6 +1,7 @@
 package io.dawei.represent;
 
 import android.util.Log;
+import android.widget.ListView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -16,6 +17,7 @@ import org.json.JSONObject;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class CDInfo {
 
@@ -26,11 +28,14 @@ public class CDInfo {
     private String longitude = "";
     private String latitude = "";
     public String address = "";
-    private android.content.Context context;
-    public ArrayList<Representative> representatives;
+    public android.content.Context context;
+    public List<Representative> representatives;
+    private ListView listView;
 
-    CDInfo(android.content.Context context) {
+    CDInfo(android.content.Context context, ListView listView) {
         this.context = context;
+        this.listView = listView;
+
     }
 
 
@@ -62,7 +67,7 @@ public class CDInfo {
                                 JSONArray cds = result.getJSONObject("fields").getJSONArray("congressional_districts");
 //                              Keep track of the iterated reps
                                 ArrayList <String> nameRep = new ArrayList<String>(cds.length()*3);
-                                ArrayList <Representative> representatives = new ArrayList<Representative>(cds.length()*3);
+                                List<Representative> representatives = new ArrayList<Representative>();
 
                                 for (int i=0; i<cds.length(); i++) {
                                     JSONObject cd = cds.getJSONObject(i);
@@ -85,7 +90,10 @@ public class CDInfo {
                                     }
                                 }
                                 thisObject.representatives = representatives;
+                                RepresentativeListAdapter adapter = new
+                                        RepresentativeListAdapter(thisObject.context,R.layout.representative_list_item,representatives);
 
+                                thisObject.listView.setAdapter(adapter);
 
 
 
