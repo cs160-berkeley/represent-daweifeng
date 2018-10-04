@@ -41,9 +41,11 @@
             android:layout_height="18dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/party_bg_blue"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+
             android:text="party"
             android:textAlignment="center"
-
             android:textColor="@android:color/white"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -71,7 +73,7 @@
             android:layout_marginStart="44dp"
             android:layout_marginTop="12dp"
             android:ellipsize="end"
-            android:text="MarkDeSaulnier@gmail.com"
+            android:text="Check out the website below"
             android:textSize="12sp"
             app:layout_constraintEnd_toStartOf="@+id/buttonView"
             app:layout_constraintStart_toStartOf="parent"

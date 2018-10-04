@@ -13,6 +13,10 @@ import java.util.List;
 
 public class ResultActivity extends AppCompatActivity {
 
+    public static String EXTRA_NAME = "EXTRA_NAME";
+    public static String EXTRA_PARTY = "EXTRA_PARTY";
+    public static String EXTRA_ID = "EXTRA_ID";
+
     private String zipCode = "";
     private String longitude = "";
     private String latitude = "";
