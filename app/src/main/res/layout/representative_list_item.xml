@@ -56,8 +56,8 @@
             android:id="@+id/textViewPhone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="40dp"
             android:text="(925) 933-2660"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -65,23 +65,29 @@
 
         <TextView
             android:id="@+id/textViewContact"
-            android:layout_width="wrap_content"
-            android:layout_height="22dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_width="0dp"
+            android:layout_height="14dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="12dp"
+            android:ellipsize="end"
             android:text="MarkDeSaulnier@gmail.com"
             android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/buttonView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewPhone" />
 
         <TextView
             android:id="@+id/textViewWeb"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="12dp"
+            android:ellipsize="end"
             android:text="https://desaulnier.house.gov/"
             android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/buttonView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewContact" />
 
@@ -100,6 +106,52 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.859" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="28dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textViewPhone"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.602"
+            app:srcCompat="@drawable/phone" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textViewContact"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.76"
+            app:srcCompat="@drawable/email" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textViewWeb"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.909"
+            app:srcCompat="@drawable/web" />
     </android.support.constraint.ConstraintLayout>
 
     <ImageView
