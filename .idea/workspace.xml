@@ -14,24 +14,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2982d56-94e8-4476-b07e-bbdc21d30d30" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/io/dawei/represent/Committee.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/io/dawei/represent/CommitteeListAdapter.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/committee_list_item.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/dawei/represent/CDInfo.java" afterPath="$PROJECT_DIR$/app/src/main/java/io/dawei/represent/CDInfo.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/dawei/represent/DetailActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/io/dawei/represent/DetailActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/dawei/represent/LocationActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/io/dawei/represent/LocationActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/dawei/represent/RepresentativeListAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/io/dawei/represent/RepresentativeListAdapter.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/dawei/represent/ResultActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/io/dawei/represent/ResultActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/search_bg.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/search_bg.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_detail.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detail.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_location.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_location.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_result.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_result.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/representative_list_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/representative_list_item.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-    </list>
+    <list default="true" id="a2982d56-94e8-4476-b07e-bbdc21d30d30" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
