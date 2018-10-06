@@ -1,5 +1,5 @@
 # Represent!
 An android app that finds your representatives!
 ### Selecting Locations
-![Alt text](/screenshots/location.png | width=100)
+![Alt text](/screenshots/location.png =100x)
 
