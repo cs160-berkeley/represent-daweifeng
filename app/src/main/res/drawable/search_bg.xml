@@ -15,13 +15,13 @@
             />
 
         <group
-            android:translateX="0.629"
-            android:translateY="-4.571"
+            android:translateX="0.538"
+            android:translateY="-4.794"
             android:pivotX="47"
             android:pivotY="18"
-            android:scaleX="3.998"
-            android:scaleY="17.398"
-            android:rotation="51.097"
+            android:scaleX="4.13"
+            android:scaleY="18.126"
+            android:rotation="50.674"
             >
 
             <path
@@ -39,12 +39,12 @@
                         >
 
                         <item
-                            android:color="#01A4FF"
+                            android:color="#FCE410"
                             android:offset="0"
                             />
 
                         <item
-                            android:color="#FFF500"
+                            android:color="#FFA944"
                             android:offset="1"
                             />
 
@@ -59,4 +59,3 @@
     </group>
 
 </vector>
-

@@ -109,7 +109,6 @@ public class CDInfo {
 
 
 
-
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }

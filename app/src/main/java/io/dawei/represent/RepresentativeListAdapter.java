@@ -50,7 +50,7 @@ public class RepresentativeListAdapter extends ArrayAdapter<Representative> {
         ImageView imageView = view.findViewById(R.id.imageView);
 
         Button buttonView = view.findViewById(R.id.buttonView);
-
+        
         final Representative representative = representativeList.get(position);
         textViewName.setText(representative.getName());
         textViewParty.setText(representative.getParty());

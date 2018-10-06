@@ -37,6 +37,7 @@ public class ResultActivity extends AppCompatActivity {
 
             cdInfo.getWithZipCode(zipCode);
 
+
         } else {
             latitude = intent.getStringExtra(LocationActivity.EXTRA_LATITUDE);
             longitude = intent.getStringExtra(LocationActivity.EXTRA_LONGITUDE);

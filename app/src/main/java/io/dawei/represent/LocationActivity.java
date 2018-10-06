@@ -106,9 +106,10 @@ public class LocationActivity extends AppCompatActivity {
                     } else if (checkedId == R.id.radioButtonRandomLocation) {
                         latitude = "";
                         longitude = "";
+                        String[] randomZipCodes = {"28079", "48329", "27284", "01757", "20814", "15601", "32780", "46383", "30019", "44095", "21044", "97124", "20747", "98604", "48205", "46140", "34639", "10583", "06360", "02760"};
                         Random rand = new Random();
-                        int randomValue = rand.nextInt(99999);
-                        zipCode = String.valueOf(randomValue);
+                        int randomValue = rand.nextInt(20);
+                        zipCode = randomZipCodes[randomValue];
                         Log.d("random zip code", zipCode);
                     }
 
